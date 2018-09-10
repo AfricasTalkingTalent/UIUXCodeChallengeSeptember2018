@@ -1,4 +1,4 @@
-# Infra Code Challenge
+# UI/UX Code Challenge
 ## Due: Wednesday 12th September (6am) 
 #### This code challenge is due on the 12th September, 2018 or earlier.
 
@@ -19,40 +19,29 @@ You can participate on as many challenges as you wish:
   - Successive interviews for projects MAY be run to satisfy participating Africa's Talking Partners
 
 ## Code Challenge Bounty:
-  - A chance to work with some of the most brilliant minds in Africa
+  - A chance to work with some of the most brilliant minds in the world!
 
 ## Task
-In this code challenge you will be required to build a toy network protocol with a client/server architecture:
+In this code challenge you will be required to make an application that:
+1. Implements authentication (User can login and logout)
+2. The user can create a list of contacts and saves it to a DB of your choice
+3. The user can send airtime to the contacts/phone numbers using the Africa's Talking Airtime API
 
-#### For the server
-Create a program that binds to TCP port 24240. When it recieves a new connection, the program shall read three unsigned bytes. The first byte denotes a function while the second and third bytes are arguments to the function
+##### You are free to use any language or framework of choice
 
-The functions are as follows:
-- 0 -> Addition. This function adds the second and third byte
-- 1 -> This function multiplies the second and third byte
-- 2 -> Bitwise AND
-- 3 -> Bitwise OR
-- 4 -255 -> Reserved
+## Resources
+- [API Reference](http://docs.africastalking.com/)
+- [Helper libraries](https://github.com/AfricasTalkingLtd)
+- [Sandbox](https://account.africastalking.com/apps/sandbox)
+- [Simulator](https://simulator.africastalking.com:1517/)
 
-The program shall respond with one byte, the result of applying the arguments to the function, and close the connection. If the result of the function is greater than 255, the server should return the value mod 255. Start the program.
 
-#### For the client
+## Tips
+###### After signup, navigate to the sandbox(big orange button) which you’ll use to build your test app. Your API key is in settings. A link to the simulator is also in the sandbox.
+###### You are free to build using any language, using the available SDKs or the API directly. We advise building a clean simple form that allows you to send airtime to multiple phone numbers in one request(form input accepting multiple entries)
+###### The documentation is your friend. Carefully go through it, learn how the API works
+###### Extra points for good user experience, form validation, single page applications
 
-Create a program that takes three command-line arguments. The program will be invoked in the command-line as:
-
-```
->>> ./prog function arg1 arg2
-```
-
-For example:
-
-```
->>> ./prog add 6 4
-```
-
-Valid functions are the following set of strings: [add, mul, and, or],
-which correspond to the functions above. Valid arguments are 0-255.
-When the program is invoked, it should send 3 bytes to the server on port 24240. The three bytes are the byte representing the function, and the two arguments to the function. The program should read one byte from the server, print it, print a newline character, and exit.
 
 
 # Working on the Code Challenge
