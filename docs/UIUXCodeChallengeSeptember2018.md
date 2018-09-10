@@ -21,4 +21,4 @@ In this code challenge you will be required to make an application that:
 ###### Extra points for good user experience, form validation, single page applications
 
 ## Get Support from Africa's Talking
-In case you have any questions, reach out [Roina Ochieng](mailto:rochieng@africastalking.com) or [Anthony Kiplimo](anthony.kiplimo@africastalking.com)
+In case you have any questions, reach out [Roina Ochieng](mailto:rochieng@africastalking.com) or [Anthony Kiplimo](mailto:anthony.kiplimo@africastalking.com)
