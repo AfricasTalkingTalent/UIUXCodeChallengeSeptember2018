@@ -52,7 +52,7 @@ In this code challenge you will be required to make an application that:
 >Pull all changes, make sure your repository is up to date
 
 ```sh
-$ cd InfraCodeChallengeSeptember2018
+$ cd UIUXCodeChallengeSeptember2018
 $ git pull origin master
 ```
 
@@ -80,16 +80,16 @@ $ git push origin -u 25472XXXXXXX
 
 4.Commit the changes to your fork.
 
-5.Make a pull request to the InfraCodeChallengeSeptember2018 
+5.Make a pull request to the UIUXCodeChallengeSeptember2018 
 Repo.
 
 ### Additional:
-1. See the online version of the code challenge [here](http://atdevoutreach.viewdocs.io/InfraCodeChallengeSeptember2018/InfraCodeChallengeSeptember2018/) to get acquainted.
+1. See the online version of the code challenge [here](http://atdevoutreach.viewdocs.io/UIUXCodeChallengeSeptember2018/UIUXCodeChallengeSeptember2018/) to get acquainted.
 
-2.  Check out the format for submitting your code [here](http://atdevoutreach.viewdocs.io/InfraCodeChallengeSeptember2018/InfraCodeChallengeSeptember2018Steps/)
+2.  Check out the format for submitting your code [here](http://atdevoutreach.viewdocs.io/UIUXCodeChallengeSeptember2018/UIUXCodeChallengeSeptember2018Steps/)
 
 ## About Africa's Talking Code Challenges
-Please read the overview for all code challenges [here.](http://atdevoutreach.viewdocs.io/InfraCodeChallengeSeptember2018/)
+Please read the overview for all code challenges [here.](http://atdevoutreach.viewdocs.io/UIUXCodeChallengeSeptember2018/)
 
 ## Get Support from Africa's Talking
 In case you have any questions, reach out [Roina Ochieng](rochieng@africastalking.com) or [Anthony Kiplimo](anthony.kiplimo@africastalking.com)
