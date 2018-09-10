@@ -6,7 +6,7 @@
 >Pull all changes, make sure your repository is up to date
 
 ```sh
-$ cd InfraCodeChallengeSeptember2018
+$ cd UIUXCodeChallengeSeptember2018
 $ git pull origin master
 ```
 
@@ -34,5 +34,5 @@ $ git push origin -u 25472XXXXXXX
 
 4.Commit the changes to your fork.
 
-5.Make a pull request to the InfraCodeChallengeSeptember2018 
+5.Make a pull request to the UIUXCodeChallengeSeptember2018 
 Repo.
