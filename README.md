@@ -1,6 +1,5 @@
 # UI/UX Code Challenge
-## Due: Wednesday 12th September (6am) 
-#### This code challenge is due on the 12th September, 2018 or earlier.
+## This challenge is due at 1800 HRS EAT on 12th September 2018
 
 ## Simple Unchanging Rules
 The code challenge is and will always be judged using the following criteria:
@@ -86,3 +85,5 @@ Repo.
 
 ## Get Support from Africa's Talking
 In case you have any questions, reach out [Roina Ochieng](mailto:rochieng@africastalking.com) or [Anthony Kiplimo](mailto:anthony.kiplimo@africastalking.com)
+
+## Submissions later than 1800 HRS EAT on 12th September 2018 will not be considered
