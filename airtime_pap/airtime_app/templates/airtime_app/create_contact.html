@@ -1,0 +1,9 @@
+<h1> Add Contact </h1>
+
+<form method="post">
+	{% csrf_token %}
+	
+	{% include "airtime_app/form_snippet.html" %}
+
+	<button type="submit">Add Contact</button>
+</form>

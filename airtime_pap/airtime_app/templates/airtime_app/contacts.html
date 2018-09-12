@@ -1,0 +1,8 @@
+<h1>contacts list</h1>
+
+<ul>
+	{% for cont in contacts%} 
+		<li>{{cont.first_name}} {{cont.last_name}} {{cont.phone_number}}</li>
+
+	{% endfor %}
+</ul>

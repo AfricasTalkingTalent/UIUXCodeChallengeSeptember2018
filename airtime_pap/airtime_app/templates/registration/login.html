@@ -1,0 +1,9 @@
+<h1> Log in </h1>
+
+<form method="post">
+	{% csrf_token %}
+	
+	{% include "airtime_app/form_snippet.html" %}
+
+	<button type="submit">Log In</button>
+</form>

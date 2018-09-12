@@ -1,0 +1,15 @@
+<h1>Select contact(s)</h1>
+
+<form method="post" action="{%url 'select_contacts' %}">
+	{% csrf_token %}
+
+	{% for cont in contacts%} 
+		<p><a href="{%url 'send_airtime' user={{cont.id}} %}">{{cont.first_name}} {{cont.last_name}} {{cont.phone_number}}	</a>
+		</p>	
+	{% endfor %}
+
+	<button type="submit"> Select </button>
+
+
+</form>
+

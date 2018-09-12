@@ -1,0 +1,20 @@
+
+
+<h1>Select contact(s)</h1>
+
+<form method="post" action="{%url 'send_airtime' %}">
+	{% csrf_token %}
+
+	{% for cont in contacts%} 
+	<p>
+		<label for="{{cont.id}}">{{cont.first_name}} {{cont.last_name}} {{cont.phone_number}}</label> :
+		<input type="text" name="{{cont.id}}" id="{{cont.id}}" alt="enter amount">
+	</p>
+		
+	{% endfor %}
+
+	<button type="submit"> Select </button>
+
+
+</form>
+
