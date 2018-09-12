@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- BEGIN HEAD -->
+
+<head>
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta content="width=device-width, initial-scale=1" name="viewport" />
+	<meta name="description" content="UIUXCodeChallengeSeptember2018 Progressive Web App" />
+	<meta name="author" content="Kimani Mbuguah" />
+	<title>UIUXCodeChallengeSeptember2018</title>
+    <!-- google font -->
+	<link href="assets/fonts.googleapis.com/cssbc32.css?family=Open+Sans:400,300,600,700&amp;subset=all" rel="stylesheet" type="text/css" />
+	<!-- icons -->
+	<link rel="stylesheet" href="assets/css/material-design/material-design-iconic-font.min.css">
+    <link href="assets/css/font-awesome/font-awesome.min.css" rel="stylesheet" type="text/css"/>
+	<link rel="stylesheet" href="assets/fonts.googleapis.com/icone91f.css?family=Material+Icons">
+	<!--bootstrap -->
+	<link href="assets/css/bootstrap/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <!-- Material Design Lite CSS -->
+	<link rel="stylesheet" href="assets/css/material-design/material.min.css">
+	<link rel="stylesheet" href="assets/css/material-design/material_style.css">
+	<!-- Theme Styles -->
+    <link href="assets/css/theme_style.css" rel="stylesheet" id="rt_style_components" type="text/css" />
+    <link href="assets/css/style.css" rel="stylesheet" type="text/css" />
+    <link href="assets/css/responsive.css" rel="stylesheet" type="text/css" />
+    <link href="assets/css/theme-color.css" rel="stylesheet" type="text/css" />
+	<!-- favicon -->
+    <link rel="shortcut icon" href="assets/img/favicon.ico" /> 
+
+    <!--Firebase-->
+    <script src="https://www.gstatic.com/firebasejs/5.4.2/firebase.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.3.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.3.0/firebase-firestore.js"></script>
+
+ </head>
+ <!-- END HEAD -->
+<body class="page-header-fixed sidemenu-closed-hidelogo page-content-white page-md page-full-width header-white white-sidebar-color logo-indigo">
+    <div class="page-wrapper">
+        <!-- start header -->
+        <div class="page-header navbar navbar-fixed-top">
+            <div class="page-header-inner ">
+                <!-- logo start -->
+                <div class="page-logo">
+                    <a href="index.html">
+                    <span class="logo-icon fa fa-desktop fa-rotate-45"></span>
+                    <span class="logo-default">UI/UX</span> </a>
+                </div>
+                <!-- logo end -->
+				<ul class="nav navbar-nav navbar-left in">
+					<li><a href="#" class="menu-toggler sidebar-toggler"><i class="icon-menu"></i></a></li>
+				</ul>
+                 <form class="search-form-opened" action="#" method="GET">
+                    <div class="input-group">
+                        <input type="text" class="form-control" placeholder="Search..." name="query">
+                        <span class="input-group-btn">
+                          <a href="javascript:;" class="btn submit">
+                             <i class="icon-magnifier"></i>
+                           </a>
+                        </span>
+                    </div>
+                </form>
+                <!-- start mobile menu -->
+                <a href="javascript:;" class="menu-toggler responsive-toggler" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span></span>
+                </a>
+               <!-- end mobile menu -->
+                <!-- start header menu -->
+                <div class="top-menu">
+                    <ul class="nav navbar-nav pull-right">
+ 						<!-- start manage user dropdown -->
+ 						<li class="dropdown dropdown-user">
+                            <a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-close-others="true">
+                                <img alt="" class="img-circle " src="assets/img/dp.jpg" />
+                                <span class="username username-hide-on-mobile" id="username"> John </span>
+                                <i class="fa fa-angle-down"></i>
+                            </a>
+                            <ul class="dropdown-menu dropdown-menu-default">
+                                <li>
+                                    <a href="user_profile.html">
+                                        <i class="icon-user"></i> Profile </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <i class="icon-settings"></i> Settings
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <i class="icon-directions"></i> Help
+                                    </a>
+                                </li>
+                                <li class="divider"> </li>
+                                <li>
+                                    <a href="lock_screen.html">
+                                        <i class="icon-lock"></i> Lock
+                                    </a>
+                                </li>
+                                <li>
+                                    <a id="logoutBtn">
+                                        <i class="icon-logout"></i> Log Out </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <!-- end manage user dropdown -->
+                    </ul>
+                </div>
+            </div> 
+            <!-- start horizontal menu -->
+            <div class="navbar-custom">
+				<div class="hor-menu hidden-sm hidden-xs">
+                    <ul class="nav navbar-nav">
+                        <li class="mega-menu-dropdown active open">
+                            <a href="index.html" class="dropdown-toggle"> <i class="fa fa-dashboard"></i>  Dashboard
+                                <span class="selected"></span>
+                                <span class="arrow open"></span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>                			
+			</div>
+			<!-- end horizontal menu -->
+        </div>
+        <!-- end header -->
+
+        <!-- start page container -->
+        <div class="page-container">
+ 			<!-- start sidebar menu -->
+ 			<div class="sidebar-container">
+ 				<div class="sidemenu-container navbar-collapse collapse fixed-menu">
+	                <div id="remove-scroll" class="left-sidemenu">
+	                    <ul class="sidemenu  page-header-fixed slimscroll-style" data-keep-expanded="false" data-auto-scroll="true" data-slide-speed="200" style="padding-top: 20px">
+	                        <li class="sidebar-toggler-wrapper hide">
+	                            <div class="sidebar-toggler">
+	                                <span></span>
+	                            </div>
+	                        </li>
+	                        <li class="sidebar-user-panel">
+	                            <div class="user-panel">
+	                                <div class="pull-left image">
+	                                    <img src="assets/img/dp.jpg" class="img-circle user-img-circle" alt="User Image" />
+	                                </div>
+	                                <div class="pull-left info">
+	                                    <p> John Doe</p>
+	                                    <a href="#"><i class="fa fa-circle user-online"></i><span class="txtOnline"> Online</span></a>
+	                                </div>
+	                            </div>
+	                        </li>
+	                        <li class="nav-item start active open">
+	                            <a href="index.html" class="nav-link nav-toggle">
+	                                <i class="material-icons">dashboard</i>
+	                                <span class="title">Dashboard</span>
+	                                <span class="selected"></span>
+                                	<span class="arrow open"></span>
+	                            </a>
+	                        </li>
+	                    </ul>
+	                </div>
+                </div>
+            </div>
+			<!-- end sidebar menu --> 
+			
+			<!-- start page content -->
+            <div class="page-content-wrapper">
+                    <div class="page-content">
+                        <div class="page-bar">
+                            <div class="page-title-breadcrumb">
+                                <div class=" pull-left">
+                                    <div class="page-title">My Contacts</div>
+                                </div>
+                                <ol class="breadcrumb page-breadcrumb pull-right">
+                                    <li><i class="fa fa-home"></i>&nbsp;<a class="parent-item" href="index-2.html">Home</a>&nbsp;<i class="fa fa-angle-right"></i>
+                                    </li>
+                                    <li><a class="parent-item" href="#">Contacts</a>&nbsp;<i class="fa fa-angle-right"></i>
+                                    </li>
+                                    <li class="active">Add Contacts</li>
+                                </ol>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12 col-sm-12">
+                                <div class="card card-box">
+                                    <div class="card-head">
+                                        <header>Create New Contact</header>
+                                         <button id = "panel-button" 
+                                               class = "mdl-button mdl-js-button mdl-button--icon pull-right" 
+                                               data-upgraded = ",MaterialButton">
+                                               <i class = "material-icons">more_vert</i>
+                                            </button>
+                                            <ul class = "mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect"
+                                               data-mdl-for = "panel-button">
+                                               <li class = "mdl-menu__item"><i class="material-icons">assistant_photo</i>Action</li>
+                                               <li class = "mdl-menu__item"><i class="material-icons">print</i>Another action</li>
+                                               <li class = "mdl-menu__item"><i class="material-icons">favorite</i>Something else here</li>
+                                            </ul>
+                                    </div>
+                                    <div class="card-body" id="bar-parent">
+                                        <form action="#" id="form_sample_1" class="form-horizontal">
+                                            <div class="form-body">
+                                            <div class="form-group row">
+                                                    <label class="control-label col-md-3">First Name
+                                                        <span class="required"> * </span>
+                                                    </label>
+                                                    <div class="col-md-5">
+                                                        <input type="text" name="firstname" data-required="1" placeholder="enter first name" class="form-control input-height" id="fname"/> </div>
+                                                </div>
+                                                <div class="form-group row">
+                                                    <label class="control-label col-md-3">Last Name
+                                                        <span class="required"> * </span>
+                                                    </label>
+                                                    <div class="col-md-5">
+                                                        <input type="text" name="lastname" data-required="1" placeholder="enter last name" class="form-control input-height" id="lname" /> </div>
+                                                </div>
+                                                
+                                                <div class="form-group row">
+                                                    <label class="control-label col-md-3">Mobile No.
+                                                        <span class="required"> * </span>
+                                                    </label>
+                                                    <div class="col-md-5">
+                                                        <input name="number" type="text" placeholder="mobile number" class="form-control input-height" id="mnumber" /> </div>
+                                                </div>
+                                                <div class="form-actions">
+                                                <div class="row">
+                                                    <div class="offset-md-3 col-md-9">
+                                                        <button type="submit" class="btn btn-info" id="createContact">Submit</button>
+                                                        <button type="button" class="btn btn-default">Cancel</button>
+                                                    </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- end page content -->
+            <!-- end page content -->
+        </div>
+        <!-- end page container -->
+        <!-- start footer -->
+        <div class="page-footer">
+            <div class="page-footer-inner"> 2018 &copy; UIUXCodeChallengeSeptember2018 || Powered By
+            <a href="#" target="_top" class="makerCss">Kimani Mbuguah</a>
+            </div>
+            <div class="scroll-to-top">
+                <i class="fa fa-home"></i>
+            </div>
+        </div>
+        <!-- end footer -->
+    </div>
+    <!-- start js include path -->
+    <script src="assets/js/jquery.min.js" ></script>
+	<script src="assets/js/jquery.slimscroll.js"></script>
+    <!-- bootstrap -->
+    <script src="assets/js/bootstrap/bootstrap.min.js" ></script>
+    <script src="assets/js/bootstrap-switch/js/bootstrap-switch.min.js" ></script>
+    <!-- Common js-->
+	<script src="assets/js/app.js" ></script>
+    <script src="assets/js/layout.js" ></script>
+    <!-- material -->
+    <script src="assets/js/material/material.min.js"></script>
+    <!-- end js include path -->
+
+    <script src="assets/js/add_contact.js"></script>
+  </body>
+
+</html>
