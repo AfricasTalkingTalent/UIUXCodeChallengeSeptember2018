@@ -1,12 +1,3 @@
-<<<<<<< HEAD
-=======
-/*
- *  Document   : material_style.css
- *  Author     : RedStar Theme
- *  Description: custom style for material components
- */
->>>>>>> 488149ffb8636934cb5f105f4df7b9e88dd71d71
-
 .badges .ml-card-holder .demo-badge-3[data-badge]:after {
     background-color: #9c27b0;
 }
