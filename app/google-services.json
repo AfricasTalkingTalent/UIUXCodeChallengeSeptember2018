@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "830949487098",
+    "firebase_url": "https://sambazaquick.firebaseio.com",
+    "project_id": "sambazaquick",
+    "storage_bucket": "sambazaquick.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:830949487098:android:73bdf9f61bc2d933",
+        "android_client_info": {
+          "package_name": "com.example.ian.sambazaquick"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "830949487098-ph7npqgq33rj7vh10nt7choddmcbvqs5.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.ian.sambazaquick",
+            "certificate_hash": "5cdbfb6243abcaa938a4affb1fb42464d47a4764"
+          }
+        },
+        {
+          "client_id": "830949487098-udensv1lig1q0eki0ru9pk46pito5166.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBYIG0z2Yl_t0W3f9dsmHlq9vQ0OHUwGfU"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "830949487098-udensv1lig1q0eki0ru9pk46pito5166.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
