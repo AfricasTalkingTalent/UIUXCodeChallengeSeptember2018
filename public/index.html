@@ -4,14 +4,38 @@
   <title>AT</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
-  <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-  <div id="app" class="container pt-4">
-    <h1>Hello, World!</h1>
+  <div class="container pt-4">
+    <div class="d-flex justify-content-between align-items-center mb-4">
+      <h2>Contact List</h2>
+    </div>
+    <div id="contact-container">
+      <div class="row">
+        <div class="col-3">
+          <div class="card">
+            <div class="card-body">
+              <form id="form-entry" class="mb-0">
+                <div class="form-group">
+                  <label for="name">Name</label>
+                  <input type="text" class="form-control" id="name">
+                </div>
+                <div class="form-group">
+                  <label for="phone">Phone Number</label>
+                  <input type="number" class="form-control" id="phone">
+                </div>
+                <button type="submit" class="btn btn-primary">Add Contact</button>
+              </form>
+            </div>
+          </div>
+        </div>
+        <div class="col-9">
+          <ul class="list-group" id="contact"></ul>
+        </div>
+      </div>
+    </div>
   </div>
-
   <script type="text/javascript" src="/main.js"></script>
 </body>
 
