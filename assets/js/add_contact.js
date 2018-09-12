@@ -24,9 +24,9 @@ addContactBtn.addEventListener('click',()=>{
 
     // Add a new document in collection "cities"
     db.collection("contacts").doc(`${mobile}`).set({
-        name: "Los Angeles",
-        state: "CA",
-        country: "USA"
+        fname: fname,
+        lname: lname,
+        mobile: mobile
     })
     .then(function() {
         console.log("Document successfully written!");
