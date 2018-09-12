@@ -1,0 +1,23 @@
+{
+  "name": "UIUXCodeChallengeSeptember2018",
+  "version": "1.0.0",
+  "description": "## Simple Unchanging Rules The code challenge is and will always be judged using the following criteria:   - A Correct fork, branch and pull request   - Using the GitHub Pull Request Time Stamp and correct code quality & structure, the first developer whose code runs successfully wins   - Code quality and structure will be evaluated   - The order for pull requests will be followed, first come first win basis!   - Do not share any code that you cannot opensource on the Git Repository as its open source and Africa's Talking will not be liable for any breach of intellectual property (if any) once shared on the platform.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/joelmachango/UIUXCodeChallengeSeptember2018.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/joelmachango/UIUXCodeChallengeSeptember2018/issues"
+  },
+  "homepage": "https://github.com/joelmachango/UIUXCodeChallengeSeptember2018#readme",
+  "dependencies": {
+    "express": "^4.16.3"
+  }
+}
