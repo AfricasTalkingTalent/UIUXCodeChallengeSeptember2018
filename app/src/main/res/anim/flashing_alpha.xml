@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<set xmlns:android="http://schemas.android.com/apk/res/android" android:duration="300" android:repeatMode="restart" android:fillAfter="true"
+     android:shareInterpolator="true" android:interpolator="@android:anim/accelerate_interpolator">
+
+    <scale
+        android:fromXScale="0.0"
+        android:toXScale="1.0"
+        android:fromYScale="0.0"
+        android:toYScale="1.0"
+        android:pivotX="50%"
+        android:pivotY="50%"
+        android:repeatCount="0"/>
+
+    <alpha
+        android:fromAlpha="1.0"
+        android:toAlpha="0.0"
+        android:repeatCount="0"/>
+
+</set>
+
+<!-- This is for the login custom animation Remove repeatMode and repeatCount-->
