@@ -7,13 +7,13 @@ from phonenumber_field.modelfields import PhoneNumberField
 
 class Contact(models.Model):
 	''' 
-	defines a contact entry in the phonebook 
-	a contact is associated with a user
+	defines a contact entry in the phonebook. 
+	A contact is associated with a user
 	'''
 
 	first_name = models.CharField(max_length = 100)
 	last_name = models.CharField(max_length = 100)
-	phone_number = PhoneNumberField()
+	phone_number = PhoneNumberField(unique=True)
 
 	owner = models.ManyToManyField(User)
 

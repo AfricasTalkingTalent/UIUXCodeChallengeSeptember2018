@@ -1,5 +1,48 @@
-<h1> Welcome Home </h1>
+{% extends 'airtime_app/base.html' %}
 
-<p><a href="#">Add New Contact</a></p>
-<p><a href="#">View Contacts</a></p>
-<p><a href="#">Send Airtime</a></p>
+{%block title%} Home -{{block.super}} {%endblock%}
+
+{% block side-menu %} 
+
+	<h6> main </h6>
+	<a href="{% url 'home' %}" class="active"><i class="fa fa-home"></i> Home</a>
+	<a href="{% url 'contacts'%}"><i class="fa fa-group"></i> Contacts</a>
+	<a href="{% url 'send_airtime' %}"><i class="fa fa-paper-plane-o"></i> Send Airtime</a>
+	<a href="{% url 'add_contact' %}"><i class="fa fa-user-plus"></i> Add Contact</a> 
+
+	{% if user.is_authenticated %}
+		
+		<a href="{% url 'logout' %}"><i class="fa fa-toggle-off"></i> Log Out</a>
+
+	{%else%}
+		
+		<a href="{% url 'signup' %}"><i class="fa fa-pencil-square-o"></i> Sign Up</a> 
+	{%endif%}	
+
+{% endblock %}
+
+{% block main%}
+
+
+<div class="content">
+	
+	<a href="{% url 'contacts' %}" class="item" id="item-contact"> 
+		<i class="fa fa-group"></i>
+	</a>
+
+	<a href="{% url 'send_airtime' %}" class="item" id="item-send-airtime"> 
+		<i class="fa fa-paper-plane-o"></i>
+	</a>
+
+	<a href="{% url 'add_contact' %}" class="item" id="item-add-contact"> 
+		<i class="fa fa fa-user-plus"></i>
+	</a>
+
+	<a href="{% url 'logout' %}" class="item" id="item-logout"> 
+		<i class="fa fa-toggle-off"></i>
+	</a>
+</div>	
+
+
+
+{% endblock %}

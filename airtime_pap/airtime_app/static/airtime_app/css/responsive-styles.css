@@ -1,0 +1,255 @@
+
+/* Screens Resolution : 1680px
+-------------------------------------------------------------------------- */
+@media only screen and (max-width: 1680px) {
+	html{
+		font-size: 12pt;
+	}	
+}
+
+
+/* Screens Resolution : 1200px
+-------------------------------------------------------------------------- */
+@media only screen and (max-width: 1280px) {
+	
+	/* ---------------------------------
+	A. PRIMARY STYLES
+	--------------------------------- */
+	html{
+		font-size: 11pt;
+	}
+}
+
+
+/* Screens Resolution : 870px
+-------------------------------------------------------------------------- */
+@media only screen and (min-width: 870px) {
+	.menu-btn{
+		display: none;
+	}
+
+}
+
+/* Screens Resolution : 870px
+-------------------------------------------------------------------------- */
+@media only screen and (max-width: 870px) {
+	
+	.side-menu{
+		position: fixed;
+		z-index: 10000;
+		height: 100%;
+		top:0;
+		bottom: 0;
+
+		-webkit-transform: translateX(-200px);
+	  	-moz-transform: translateX(-200px);
+	  	-ms-transform: translateX(-200px);
+	  	-o-transform: translateX(-200px);
+	  	transform: translateX(-200px);
+	}
+
+
+	p{
+		font-size: 18px;
+		line-height: 1.5;
+	}
+
+	.main .content{
+
+	}
+
+	.item{
+		margin-right: 10px;
+	}
+
+	.main .content{
+		margin: 0;
+		width: 100%;
+		padding: 100px 30px 20px;
+	}
+
+	/*send airtime page */
+	.send-airtime-btn{
+		left: 0;
+		padding: 10px 10px 15px;
+	}
+
+	.send-airtime-btn input{
+		width: 60%;
+		margin-bottom: 5px;
+	}
+}
+
+
+
+/* Screens Resolution : 767px
+-------------------------------------------------------------------------- */
+@media only screen and (max-width: 767px) {
+	
+	.side-menu{
+		/*width: 300px;*/
+	}	
+
+	.item{
+		width: 120px;
+		height: 120px;
+		line-height: 120px;
+		margin-bottom: 40px;
+	}
+
+	.item i{
+		font-size: 30px;
+	}
+
+	.main .content{
+		margin: 0;
+		width: 100%;
+		padding: 100px 10px 20px;
+	}
+
+	/* form pages */
+
+	.generic-container{
+		padding: 0;
+	}
+	.content-container{
+		width: 100%;
+		margin: 0;
+	}
+
+	.content-contacts{
+		padding: 20px 0 10px 0;
+		/*font-size: 15px;*/
+	}
+
+}
+
+
+/* Screens Resolution : 567px
+-------------------------------------------------------------------------- */
+@media only screen and (max-width: 567px) {
+
+	.main .content{
+		margin: 0;
+		width: 100%;
+		padding: 90px;
+	}
+
+	/* contacts page */
+	.content-contacts{
+		font-size: 18px;
+	}
+
+	.content-contacts span{
+		margin-right: 10px;
+	}
+
+	/*send airtime page*/
+
+	table{
+		width: 100%;
+	}
+
+	.content-send-airtime{
+		padding: 20px 0px;
+	}
+
+	.send-airtime-btn input{
+		width: 80%;
+		margin-bottom: 5px;
+	}
+
+}
+
+/* Screens Resolution : 450px
+-------------------------------------------------------------------------- */
+@media only screen and (max-width: 450px) {
+
+	.profile-icon{
+		width: 50px;
+		height: 50px;
+		line-height: 50px;
+	}
+
+	.profile-icon i{
+		font-size: 30px;
+	}
+
+	.main .content{
+		padding: 50px;
+	}
+
+	.item{
+		height: 110px;
+		width: 110px;
+		line-height: 110px;
+	}
+
+	.item i{
+		font-size: 25px;
+	}
+
+	/* contacts page*/
+	.content-contacts{
+		padding: 20px 0 10px 0;
+		font-size: 15px;
+	}
+
+	.content-contacts .contact{
+		padding: 10px 0;
+	}
+
+	.name-initial{
+		width: 40px;
+		height: 40px;
+		line-height:40px;
+	}
+
+	.content-contacts span{
+		display: inline-block;
+		margin-right: 10px;
+	}
+
+	/* send airtime page */
+
+	table td{
+		padding: 10px;
+	}
+
+	table .table-cell{
+		padding-left: 20px;
+	}
+
+	table .table-last-cell{
+		padding-right: 20px;	
+	}
+
+	/*form pages*/
+	form input {
+		padding: 15px 50px;
+	}
+
+	form{
+		padding: 10px;
+	}
+
+
+/* Screens Resolution : 359px
+-------------------------------------------------------------------------- */
+@media only screen and (max-width: 359px) {
+
+	html{
+		font-size: 10pt;
+	}
+
+	.main .content{
+		padding: 30px;
+	}
+
+}
+
+/* Screens Resolution : 290px
+-------------------------------------------------------------------------- */
+@media only screen and (max-width: 290px) {
+	
+}

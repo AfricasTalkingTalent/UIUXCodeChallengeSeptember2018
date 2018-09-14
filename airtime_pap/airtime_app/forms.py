@@ -1,5 +1,7 @@
 from django.forms import ModelForm
+from django import forms
 from .models import Contact
+
 
 class CreateContactForm(ModelForm):
 	''' creates a new contact '''
@@ -10,11 +12,13 @@ class CreateContactForm(ModelForm):
 		labels = {
 			'first_name': 'First Name',
 			'last_name': 'Last Name',
-			'phone_number': 'Phone Number'
+			'phone_number': 'Phone'
 		}
 
-		help_texts = {
-			'phone_number': 'enter phone number in the format +2547XXXXXXXX'
-		}
+		widgets = {
+            'first_name': forms.TextInput(attrs={'placeholder': 'first name'}),
+            'last_name': forms.TextInput(attrs={'placeholder': 'last name'}),
+            'phone_number': forms.TextInput(attrs={'placeholder': 'phone number e.g +2547xxx12345'}),
+        }
 
 

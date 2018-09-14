@@ -1,14 +1,21 @@
 [[source]]
-url = "https://pypi.org/simple"
+
+url = "https://pypi.python.org/simple"
 verify_ssl = true
 name = "pypi"
 
-[packages]
-django = "==2.1.1"
-africastalking = "*"
-django-phonenumber-field = "*"
 
 [dev-packages]
 
+
+
+[packages]
+
+django = "*"
+africastalking = "*"
+django-phonenumber-field = "*"
+
+
 [requires]
-python_version = "3.6"
+
+python_version = "3.5"
