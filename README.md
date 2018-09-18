@@ -87,7 +87,7 @@ $ python manage.py migrate
 $ python manage.py runserver
 ```
 
-> View the app in your browser at [http://127.0.0.1:8000/](http://127.0.0.1:8000/)
+> View the app in your browser at [local host](http://127.0.0.1:8000/)
 
 
 ## Navigating the app
