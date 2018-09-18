@@ -1,0 +1,51 @@
+{% extends 'airtime_app/base.html' %}
+
+{% block title%} Sign up - {{block.super}} {% endblock %}
+
+{% block side-menu %} 
+
+	<h6> main </h6>
+	<a href="{% url 'home' %}"><i class="fa fa-home"></i> Home</a>
+	<a href="{% url 'contacts'%}"><i class="fa fa-group"></i> Contacts</a>
+	<a href="{% url 'send_airtime' %}"><i class="fa fa-paper-plane-o"></i> Send Airtime</a>
+	<a href="{% url 'add_contact' %}"><i class="fa fa-user-plus"></i> Add Contact</a> 
+
+	{% if user.is_authenticated %}
+		
+		<a href="{% url 'logout' %}"><i class="fa fa-toggle-off"></i> Log Out</a>
+
+	{%else%}
+		
+		<a href="{% url 'signup' %}" class="active"><i class="fa fa-pencil-square-o"></i> Sign Up</a> 
+	{%endif%}	
+
+{% endblock %}
+
+{% block main%}
+
+<div class="add-contact-content">
+	<div class="content-container">
+		<span class="content-container-meta"> Enter your details below to sign up </span>
+		<span class="content-container-meta-other"> 
+			Already have an account? <a href="{% url 'login' %}"> log in here</a>
+		</span>
+
+		<form method="post">
+			{% csrf_token %}
+			
+			{% include "airtime_app/form_snippet.html" %}
+
+			<button type="submit">Sign up</button>
+		</form>
+	</div>
+</div>	
+
+{% endblock %}
+
+
+
+
+
+
+
+

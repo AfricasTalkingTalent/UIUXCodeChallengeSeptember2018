@@ -1,0 +1,89 @@
+{% extends 'airtime_app/base.html' %}
+
+{% load static %}
+
+{% block title%} Send Airtime - {{block.super}} {% endblock %}
+
+{% block side-menu %} 
+
+	<h6> main </h6>
+	<a href="{% url 'home' %}"><i class="fa fa-home"></i> Home</a>
+	<a href="{% url 'contacts'%}"><i class="fa fa-group"></i> Contacts</a>
+	<a href="{% url 'send_airtime' %}" class="active"><i class="fa fa-paper-plane-o"></i> Send Airtime</a>
+	<a href="{% url 'add_contact' %}"><i class="fa fa-user-plus"></i> Add Contact</a> 
+
+	{% if user.is_authenticated %}
+		
+		<a href="{% url 'logout' %}"><i class="fa fa-toggle-off"></i> Log Out</a>
+
+	{%else%}
+		
+		<a href="{% url 'signup' %}"><i class="fa fa-pencil-square-o"></i> Sign Up</a> 
+	{%endif%}	
+
+{% endblock %}
+
+{% block main%}
+	
+	{% if has_contacts %}
+
+		<div class="content-send-airtime">
+			
+			<form id="send-airtime-form" name="send-airtime-form" method="post" action="{%url 'send_airtime' %}">
+				{% csrf_token %}
+
+				<table id="select-contact-table">
+					<tr><td colspan="4" class="table-head">Select contacts to send airtime</td></tr>
+					{% for recipient in user_contacts_list%} 
+						<tr>
+							<td class="table-cell">{{recipient.first_name}}</td>
+							<td class="table-second-cell">{{recipient.last_name}}</td>
+							<td>{{recipient.phone_number}}</td>
+							<td class="table-last-cell"><input class="checkbox" type="checkbox" name="recipient_checkbox" value="{{recipient.id}}"></td>
+						</tr>
+						
+					{% endfor %}
+				</table>	
+				
+				<div class="send-airtime-btn">
+					<!-- message displayed if user tries to send airtime with no contact selected -->
+					<div id="select-contact-alert" class="">
+						<span>  Please choose a contact first by clicking a checkbox  </span>	
+					</div>				
+
+					<label for="amount">Enter Airtime Amount (e.g 500) : </label>
+					<input type="number" name="airtime_amount" id="amount" required>
+					<button type="submit" name="sumbit"> Send Airtime </button>
+				</div>	
+			</form>
+		</div>	
+
+		
+		
+
+	{% else %}
+		
+		
+		<div class="generic-container">
+			<div class="content-container">
+				<span class="content-container-meta"> No Contacts Available </span>
+				<div id="no-contacts-cont">
+					<p> You have not registered any contacts.</p>
+					<a href="{%url 'add_contact' %}"><button> Add a contact now </button></a>
+				</div>
+			</div>
+		</div>		
+
+	{% endif %}	
+
+	<!-- load formValidation.js in the template to handle send-airtime-form -->
+	<script src="{% static 'airtime_app/js/formValidation.js'%}"></script>		
+{% endblock %}
+
+
+
+
+
+
+
+

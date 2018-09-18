@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+	{% load static %}
+
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+	
+	<title>{% block title %} airtime pap {% endblock %}</title>
+
+	<!-- Font Awesome Icons -->
+	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+	<!-- Bootstrap grid 4.0.0-beta grid-->
+	<link rel="stylesheet" href="{% static 'airtime_app/css/bootstrap-grid.min.css'%}">
+
+	<!--  styles -->
+	<link rel="stylesheet" type="text/css" href="{% static 'airtime_app/css/styles.css' %}">
+
+	<!-- responsive stylesheet -->
+	<link rel="stylesheet" type="text/css" href="{% static 'airtime_app/css/responsive-styles.css' %}">
+
+	
+</head>
+
+<body>
+
+	<div class="element-container">
+		<!-- side menu -->
+		<div id="sideMenu" class="side-menu"> 
+
+			<!-- menu btn -->
+			<span id="nav-toggle-btn" class="menu-btn"><i class="fa fa-angle-double-left"></i></span>
+
+			<div class="user-profile">
+				<span class="profile-icon">
+					<i class="fa fa-user"></i>
+				</span>
+
+				{% if user.is_authenticated %}
+				<span class="user-name">
+					<span>{{user.get_username}}</span>
+					<span class="fa fa-caret-down user-name-icon"></span>
+				 </span>
+				{%endif%} 
+			</div>
+
+			<hr>
+
+			<div class="side-menu-main">
+				{% block side-menu %} 
+
+				{% endblock %}
+			</div>
+		</div>
+
+		<!-- Main -->
+		<div class="main">
+
+			<!-- top main-menu -->
+			<div class="top-main-menu">
+				<a class="github-icon" href="https://github.com/zlyxero/" target="blank"><i class="fa fa-github"></i></a>
+				<hr class="top-hr">
+				<h2> Airtime Pap! </h2>	
+				<p>
+					<span>powered by</span> <a href="https://account.africastalking.com/" target="blank"> <i class="fa fa-external-link"></i> Africa's Talking</a>
+				</p>	
+
+				<hr class="bottom-hr">
+			</div>
+
+			{% block main%} {% endblock %}
+			
+
+		</div>
+	</div>
+
+	<script src="{% static 'airtime_app/js/jquery.min.js'%}"></script>
+	<script src="{% static 'airtime_app/js/main.js'%}"></script>
+</body>
+</html>

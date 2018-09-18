@@ -1,24 +1,4 @@
 # UI/UX Code Challenge
-## This challenge is due at 1800 HRS EAT on 12th September 2018
-
-## Simple Unchanging Rules
-The code challenge is and will always be judged using the following criteria:
-  - A Correct fork, branch and pull request
-  - Using the GitHub Pull Request Time Stamp and correct code quality & structure, the first developer whose code runs successfully wins
-  - Code quality and structure will be evaluated
-  - The order for pull requests will be followed, first come first win basis!
-  - Do not share any code that you cannot opensource on the Git Repository as its open source and Africa's Talking will not be liable for any breach of intellectual property (if any) once shared on the platform.
-
-## Terms and Conditions
-You can participate on as many challenges as you wish:
-  - Do not share any code that you cannot opensource on the Git Repository as its open source and Africa's Talking will not be liable for any breach of intellectual property (if any) once shared on the platform.
-  - Code Challenges are time bound - the time restriction is specified on the challenge
-  - Additional rules MAY be provided on the code challenge and will vary for each challenge
-  - You are free to use all manner of tools
-  - Successive interviews for projects MAY be run to satisfy participating Africa's Talking Partners
-
-## Code Challenge Bounty:
-  - A chance to work with some of the most brilliant minds in the world!
 
 ## Task
 In this code challenge you will be required to make an application that:
@@ -43,47 +23,97 @@ In this code challenge you will be required to make an application that:
 
 
 
-# Working on the Code Challenge
-1.Fork the code challenge repository provided.
 
-2.Make a topic branch. In your github form, keep the master branch clean. When you create a branch, it essentially will be a copy of the master.
+# [SOLUTION] AIRTIME PAP APP DOCUMENTATION
 
->Pull all changes, make sure your repository is up to date
+## Deployed App
 
-```sh
+link: [Pesa Pap Online](http://airtimeapp.herokuapp.com/)
+
+## Installation instructions 
+
+> Clone or Download the source files at the [project repository](https://github.com/zlyxero/UIUXCodeChallengeSeptember2018)
+
+```sh 
+$ git clone https://github.com/zlyxero/UIUXCodeChallengeSeptember2018
+```
+
+> On the terminal, open the UIUXCodeChallengeSeptember2018 folder
+
+```sh 
 $ cd UIUXCodeChallengeSeptember2018
-$ git pull origin master
 ```
 
->Create a new branch as follows-> git checkout -b [your_phone_number], e.g.
+> Switch to the 254711276275 branch
 
-```sh
-$ git checkout -b 25472XXXXXXX master
+```sh 
+$ git checkout 254711276275
 ```
 
->See all branches created
+> Open the airtime_pap folder
 
-```sh
-$ git branch
-* 25472XXXXXXX
-  master
+```sh 
+$ cd airtime_pap 
 ```
 
->Push the new branch to github
+> See the files inside 
 
-```sh
-$ git push origin -u 25472XXXXXXX
+```sh 
+$ ls
+  airtime_app  
+  airtime_project  
+  manage.py  
+  Pipfile  
+  Pipfile.lock
 ```
 
-3.Make changes to the fork following the Code Challenge provided.
+> Create a virtual environment and install the application dependencies
 
-4.Commit the changes to your fork.
+```sh 
+$ pipenv install
+```
 
-5.Make a pull request to the UIUXCodeChallengeSeptember2018 
-Repo.
+> Activate the virtual environment
+
+```sh 
+$ pipenv shell
+```
+
+> Run the migrate command to set up the database
+
+```sh 
+$ python manage.py migrate
+```
+
+> Run the development server
+
+```sh 
+$ python manage.py runserver
+```
+
+> View the app in your browser at [local host](http://127.0.0.1:8000/)
 
 
-## Get Support from Africa's Talking
-In case you have any questions, reach out [Roina Ochieng](mailto:rochieng@africastalking.com) or [Anthony Kiplimo](mailto:anthony.kiplimo@africastalking.com)
+## Navigating the app
 
-## Submissions later than 1800 HRS EAT on 12th September 2018 will not be considered
+1. Create an account
+
+2. Add a contact
+
+3. In a new browser tab, Open the Africa's Talking [Simulator](https://simulator.africastalking.com:1517/)
+
+ > Register your contact and click on the launch button
+
+ > Open the airtime menu option 
+
+4. Switch back to the app tab on your browser
+
+5. On the app menu, select send airtime
+
+6. select a checkbox next to your contact to send airtime. Enter amount and click on the send
+   airtime button
+
+7. Open the Africa's Talking Simulator tab in your browser to see the confirmation message
+
+
+
