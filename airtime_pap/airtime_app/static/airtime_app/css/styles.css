@@ -478,10 +478,10 @@ blockquote{
 .side-menu .menu-btn i{
 	font-size: 30px;
 
-	-webkit-transform: translateX(0px);
-  	-moz-transform: translateX(0px);
-  	-ms-transform: translateX(0px);
-  	-o-transform: translateX(0px);
+	-webkit-transform: rotate(45deg);
+  	-moz-transform: rotate(45deg);
+  	-ms-transform: rotate(45deg);
+  	-o-transform: rotate(45deg);
 	transform: rotate(45deg);
 
 	-webkit-transition: transform 0.5s ease 0s;
@@ -775,6 +775,7 @@ table tr{
 
 table td{
 	padding: 20px;
+	vertical-align: middle;
 }
 
 table .table-head{
@@ -787,8 +788,46 @@ table .table-cell{
 	padding-left: 60px;
 }
 
+
 table .table-last-cell{
-	padding-right: 60px;	
+	padding-right: 120px;	
+}
+
+table .table-second-cell{
+	padding-left: 0;
+}
+
+#select-contact-table tr:last-child td{
+	padding-bottom: 150px;
+}
+
+.checkbox{
+	width: 30px;
+	height: 30px;
+	margin-top: 15px;
+}
+
+#select-contact-alert{
+	color: red;
+
+	-webkit-transition: transform 0.5s ease 0s;
+  	-o-transition: transform 0.5s ease 0s;
+  	transition: transform 0.5s ease 0s;
+
+  	-webkit-transform: translateX(1000px);
+  	-moz-transform: translateX(1000px);
+  	-ms-transform: translateX(1000px);
+  	-o-transform: translateX(1000px);
+	transform: translateX(1000px);
+}
+
+#select-contact-alert.display{
+
+	-webkit-transform: translateX(0px);
+  	-moz-transform: translateX(0px);
+  	-ms-transform: translateX(0px);
+  	-o-transform: translateX(0px);
+	transform: translateX(0px);	
 }
 
 .send-airtime-btn{

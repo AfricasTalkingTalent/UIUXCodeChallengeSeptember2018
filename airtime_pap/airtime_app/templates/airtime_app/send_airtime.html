@@ -1,5 +1,7 @@
 {% extends 'airtime_app/base.html' %}
 
+{% load static %}
+
 {% block title%} Send Airtime - {{block.super}} {% endblock %}
 
 {% block side-menu %} 
@@ -26,29 +28,38 @@
 	{% if has_contacts %}
 
 		<div class="content-send-airtime">
-			<form id="send_airtime-form" method="post" action="{%url 'send_airtime' %}">
+			
+			<form id="send-airtime-form" name="send-airtime-form" method="post" action="{%url 'send_airtime' %}">
 				{% csrf_token %}
 
-				<table>
+				<table id="select-contact-table">
 					<tr><td colspan="4" class="table-head">Select contacts to send airtime</td></tr>
 					{% for recipient in user_contacts_list%} 
 						<tr>
 							<td class="table-cell">{{recipient.first_name}}</td>
-							<td>{{recipient.last_name}}</td>
-							<td class="table-cell">{{recipient.phone_number}}</td>
-							<td class="table-last-cell"><input type="checkbox" name="recipient_checkbox" value="{{recipient.id}}"></td>
+							<td class="table-second-cell">{{recipient.last_name}}</td>
+							<td>{{recipient.phone_number}}</td>
+							<td class="table-last-cell"><input class="checkbox" type="checkbox" name="recipient_checkbox" value="{{recipient.id}}"></td>
 						</tr>
 						
 					{% endfor %}
 				</table>	
 				
 				<div class="send-airtime-btn">
+					<!-- message displayed if user tries to send airtime with no contact selected -->
+					<div id="select-contact-alert" class="">
+						<span>  Please choose a contact first by clicking a checkbox  </span>	
+					</div>				
+
 					<label for="amount">Enter Airtime Amount (e.g 500) : </label>
-					<input type="number" name="airtime_amount" id="amount">
-					<button type="submit"> Send Airtime </button>
+					<input type="number" name="airtime_amount" id="amount" required>
+					<button type="submit" name="sumbit"> Send Airtime </button>
 				</div>	
 			</form>
 		</div>	
+
+		
+		
 
 	{% else %}
 		
@@ -64,8 +75,11 @@
 		</div>		
 
 	{% endif %}	
-		
+
+	<!-- load formValidation.js in the template to handle send-airtime-form -->
+	<script src="{% static 'airtime_app/js/formValidation.js'%}"></script>		
 {% endblock %}
+
 
 
 

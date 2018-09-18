@@ -1,7 +1,7 @@
  $(document).ready(function(){
 
  		// add placeholder text to forms
-        $("#id_username").attr('placeholder', 'Enter your name -no spaces! ');
+        $("#id_username").attr('placeholder', 'Enter your FIRST name');
         $("#id_password").attr('placeholder', 'Enter your password');
         $("#id_password1").attr('placeholder', 'Enter password');
         $("#id_password2").attr('placeholder', 'Enter password as before');

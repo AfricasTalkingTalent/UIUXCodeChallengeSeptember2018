@@ -1,24 +1,4 @@
 # UI/UX Code Challenge
-## This challenge is due at 1800 HRS EAT on 12th September 2018
-
-## Simple Unchanging Rules
-The code challenge is and will always be judged using the following criteria:
-  - A Correct fork, branch and pull request
-  - Using the GitHub Pull Request Time Stamp and correct code quality & structure, the first developer whose code runs successfully wins
-  - Code quality and structure will be evaluated
-  - The order for pull requests will be followed, first come first win basis!
-  - Do not share any code that you cannot opensource on the Git Repository as its open source and Africa's Talking will not be liable for any breach of intellectual property (if any) once shared on the platform.
-
-## Terms and Conditions
-You can participate on as many challenges as you wish:
-  - Do not share any code that you cannot opensource on the Git Repository as its open source and Africa's Talking will not be liable for any breach of intellectual property (if any) once shared on the platform.
-  - Code Challenges are time bound - the time restriction is specified on the challenge
-  - Additional rules MAY be provided on the code challenge and will vary for each challenge
-  - You are free to use all manner of tools
-  - Successive interviews for projects MAY be run to satisfy participating Africa's Talking Partners
-
-## Code Challenge Bounty:
-  - A chance to work with some of the most brilliant minds in the world!
 
 ## Task
 In this code challenge you will be required to make an application that:
@@ -87,3 +67,95 @@ Repo.
 In case you have any questions, reach out [Roina Ochieng](mailto:rochieng@africastalking.com) or [Anthony Kiplimo](mailto:anthony.kiplimo@africastalking.com)
 
 ## Submissions later than 1800 HRS EAT on 12th September 2018 will not be considered
+
+
+
+# [SOLUTION] AIRTIME PAP APP DOCUMENTATION
+
+## Installation instructions 
+
+> Clone or Download the source files at the [project repository](https://github.com/zlyxero/UIUXCodeChallengeSeptember2018)
+
+```sh 
+$ git clone https://github.com/zlyxero/UIUXCodeChallengeSeptember2018
+```
+
+> On the terminal, open the UIUXCodeChallengeSeptember2018 folder
+
+```sh 
+$ cd UIUXCodeChallengeSeptember2018
+```
+
+> Switch to the 254711276275 branch
+
+```sh 
+$ git checkout 254711276275
+```
+
+> Open the airtime_pap folder
+
+```sh 
+$ cd airtime_pap 
+```
+
+> See the files inside 
+
+```sh 
+$ ls
+  airtime_app  
+  airtime_project  
+  manage.py  
+  Pipfile  
+  Pipfile.lock
+```
+
+> Create a virtual environment and install the application dependencies
+
+```sh 
+$ pipenv install
+```
+
+> Activate the virtual environment
+
+```sh 
+$ pipenv shell
+```
+
+> Run the migrate command to set up the database
+
+```sh 
+$ python manage.py migrate
+```
+
+> Run the development server
+
+```sh 
+$ python manage.py runserver
+```
+
+> View the app in your browser at [http://127.0.0.1:8000/](http://127.0.0.1:8000/)
+
+
+## Navigating the app
+
+1. Create an account
+
+2. Add a contact
+
+3. In a new browser tab, Open the Africa's Talking [Sandbox](https://account.africastalking.com/apps/sandbox)
+
+ > Register your contact and click on the launch button
+
+ > Open the airtime menu option 
+
+4. Switch back to the app tab on your browser
+
+5. On the app menu, select send airtime
+
+6. select a checkbox next to your contact to send airtime. Enter amount and click on the send
+   airtime button
+
+7. Open the Africa's Talking Sandbox tab in your browser to see the confirmation message
+
+
+

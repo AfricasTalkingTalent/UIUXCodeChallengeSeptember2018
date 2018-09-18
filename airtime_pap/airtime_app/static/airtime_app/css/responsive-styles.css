@@ -224,6 +224,10 @@
 		padding-right: 20px;	
 	}
 
+	#select-contact-table .table-last-cell{
+		padding-right: 10px;	
+	}
+
 	/*form pages*/
 	form input {
 		padding: 15px 50px;
@@ -245,6 +249,7 @@
 	.main .content{
 		padding: 30px;
 	}
+
 
 }
 
