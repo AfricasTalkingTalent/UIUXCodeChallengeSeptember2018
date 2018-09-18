@@ -100,7 +100,7 @@ $ python manage.py runserver
 
 2. Add a contact
 
-3. In a new browser tab, Open the Africa's Talking [Sandbox](https://account.africastalking.com/apps/sandbox)
+3. In a new browser tab, Open the Africa's Talking [Simulator](https://simulator.africastalking.com:1517/)
 
  > Register your contact and click on the launch button
 
@@ -113,7 +113,7 @@ $ python manage.py runserver
 6. select a checkbox next to your contact to send airtime. Enter amount and click on the send
    airtime button
 
-7. Open the Africa's Talking Sandbox tab in your browser to see the confirmation message
+7. Open the Africa's Talking Simulator tab in your browser to see the confirmation message
 
 
 
