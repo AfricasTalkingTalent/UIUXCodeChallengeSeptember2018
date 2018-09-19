@@ -1,6 +1,10 @@
 const express = require("express");
 const mongoose = require("mongoose");
 
+// Point urls to files
+const auth = require("./routes/api/auth");
+const contacts = require("./routes/api/contacts");
+
 const app = express();
 
 // DB Config
@@ -13,6 +17,10 @@ mongoose
   .catch(err => console.log(err));
 
 app.get("/", (req, res) => res.send("Hello World"));
+
+// Use routes
+app.use("/api/auth", auth);
+app.use("/api/contacts", contacts);
 
 const port = process.env.PORT || 5000;
 
