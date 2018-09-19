@@ -20,6 +20,7 @@
   "homepage": "https://github.com/joelmachango/UIUXCodeChallengeSeptember2018#readme",
   "dependencies": {
     "@okta/jwt-verifier": "0.0.12",
+<<<<<<< HEAD
     "bcryptjs": "^2.4.3",
     "body-parser": "^1.18.3",
     "express": "^4.16.3",
@@ -31,5 +32,9 @@
   },
   "devDependencies": {
     "nodemon": "^1.18.4"
+=======
+    "body-parser": "^1.18.2",
+    "express": "^4.16.3"
+>>>>>>> 1bc0f22a0ee8559ad4b2316efa035d8b4a50fb68
   }
 }
